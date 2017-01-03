@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Services
 {
-    public interface FindBy
+    public interface FindElement
     {
-        object WebNameValuePair(string name, string value, object parent = default(object));
-        object WebCSS(string name, string value, object parent = default(object));
+        object ByAttributeValue(string name, string value, object parent);
+        object ByCSS(string selector, object parent);
+        object ByXpath(string xpath, object parent);
     }
 
     public interface Mouse
